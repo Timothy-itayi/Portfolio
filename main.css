@@ -1,0 +1,188 @@
+/* Set default font and text color */
+body {
+  font-family:sans-serif;
+
+  color: #262626;
+  background-color: #fafafa;
+}
+
+/* Style navigation bar */
+nav {
+  background-color: #fff;
+  padding: 10px;
+  margin-top: 10px;
+  border-bottom: 1px solid #dbdbdb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: #262626;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+}
+
+nav a:hover {
+  color: #262626;
+  text-decoration: none;
+  border-bottom: 2px solid #262626;
+}
+
+/* Style hero section */
+section:nth-of-type(1) {
+  background-color: #fff;
+  padding: 80px 0;
+}
+
+section:nth-of-type(1) h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #262626;
+}
+
+section:nth-of-type(1) h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #262626;
+}
+
+section:nth-of-type(1) a {
+  display: inline-block;
+  background-color: #262626;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 50px;
+  margin-top: 2rem;
+  transition: background-color 0.3s ease;
+}
+
+section:nth-of-type(1) a:hover {
+  background-color: #000;
+}
+
+/* Style about section */
+section:nth-of-type(2) {
+  padding: 80px 0;
+}
+
+section:nth-of-type(2) h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #262626;
+}
+
+section:nth-of-type(2) p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #262626;
+}
+
+/* Style contact section */
+section:nth-of-type(3) {
+  background-color: #fff;
+  padding: 80px 0;
+}
+
+section:nth-of-type(3) h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #262626;
+}
+
+section:nth-of-type(3) ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+section:nth-of-type(3) li {
+  margin: 0 1rem;
+}
+
+section:nth-of-type(3) a {
+  display: inline-block;
+  background-color: #262626;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 50px;
+  margin-top: 2rem;
+  transition: background-color 0.3s ease;
+}
+
+section:nth-of-type(3) a:hover {
+  background-color: #000;
+}
+
+/* Hover effect for all links */
+a:hover {
+  color: #000;
+  text-decoration: none;
+  background-color: #dbdbdb;
+}
+
+/* Set default styles for images */
+.logo {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+/* set style for buttons */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeInUp 1s ease;
+  background-color: #008080;
+  color: #1b1b1b;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+
+.container:hover {
+  background-color: #666;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.animated-button {
+  display: inline-block;
+  padding: 12px 24px;
+  margin-top: 20px;
+  background-color: #008080;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.animated-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
