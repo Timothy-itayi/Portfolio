@@ -28,7 +28,7 @@ nav a {
 nav a:hover {
   color: #262626;
   text-decoration: none;
-  border-bottom: 2px solid #262626;
+  border-bottom: 2px solid #2e2e2e;
 }
 
 /* Style hero section */
