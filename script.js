@@ -23,3 +23,12 @@ const contactDropdown = document.getElementById('contact-dropdown')
 contactButton.addEventListener('click', () => {
   contactDropdown.classList.toggle('hidden')
 })
+//DropDown.addEventListener for Projects in nav bar
+document.addEventListener('DOMContentLoaded', function () {
+  const projectsButton = document.getElementById('projects-button')
+  const projectsDropdown = document.getElementById('projects-dropdown')
+
+  projectsButton.addEventListener('click', function () {
+    projectsDropdown.classList.toggle('hidden')
+  })
+})
