@@ -1,34 +1,29 @@
-// index.html
 document.addEventListener('DOMContentLoaded', function () {
-  const blogButton = document.querySelector('.animated-button.blog')
-  const resumeButton = document.querySelector('.animated-button.resume')
-
-  blogButton.addEventListener('click', () => {
-    blogButton.classList.toggle('bg-blue-500')
-    blogButton.classList.toggle('hover:bg-blue-600')
-  })
-
-  resumeButton.addEventListener('click', () => {
-    resumeButton.classList.toggle('bg-green-500')
-    resumeButton.classList.toggle('hover:bg-green-600')
-  })
-})
-
-//contact.html
-// Get the elements
-const contactButton = document.getElementById('contact-button')
-const contactDropdown = document.getElementById('contact-dropdown')
-
-// Add click event listener to the contact button
-contactButton.addEventListener('click', () => {
-  contactDropdown.classList.toggle('hidden')
-})
-//DropDown.addEventListener for Projects in nav bar
-document.addEventListener('DOMContentLoaded', function () {
+  // Dropdown functionality for projects
   const projectsButton = document.getElementById('projects-button')
   const projectsDropdown = document.getElementById('projects-dropdown')
+  const projectLinks = projectsDropdown.getElementsByTagName('a')
 
   projectsButton.addEventListener('click', function () {
+    console.log('Projects button clicked')
     projectsDropdown.classList.toggle('hidden')
   })
+
+  // Add event listeners to project links
+  for (let i = 0; i < projectLinks.length; i++) {
+    projectLinks[i].addEventListener('click', function (event) {
+      projectsDropdown.classList.add('hidden') // Hide the dropdown
+      console.log('Project link clicked:', this.getAttribute('href'))
+    })
+  }
+
+  // Dropdown functionality for contact
+  const contactButton = document.getElementById('contact-button')
+  const contactDropdown = document.getElementById('contact-dropdown')
+
+  contactButton.addEventListener('click', function () {
+    contactDropdown.classList.toggle('hidden')
+  })
 })
+
+console.log('Script is running')
