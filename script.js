@@ -1,4 +1,4 @@
-// script.js
+// index.html
 document.addEventListener('DOMContentLoaded', function () {
   const blogButton = document.querySelector('.animated-button.blog')
   const resumeButton = document.querySelector('.animated-button.resume')
@@ -12,4 +12,14 @@ document.addEventListener('DOMContentLoaded', function () {
     resumeButton.classList.toggle('bg-green-500')
     resumeButton.classList.toggle('hover:bg-green-600')
   })
+})
+
+//contact.html
+// Get the elements
+const contactButton = document.getElementById('contact-button')
+const contactDropdown = document.getElementById('contact-dropdown')
+
+// Add click event listener to the contact button
+contactButton.addEventListener('click', () => {
+  contactDropdown.classList.toggle('hidden')
 })

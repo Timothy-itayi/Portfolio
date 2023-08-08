@@ -9,6 +9,7 @@
 </head>
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
 
+
 <!-- Navigation -->
 <nav class="bg-white p-4">
   <div class="container mx-auto flex flex-wrap items-center justify-between">
@@ -23,11 +24,26 @@
         <a class="animated-button" href="#projects">PROJECTS</a>
       </li>
       <li>
-        <a class="animated-button" href="/Portfolio/blog/contact.html">CONTACT</a>
+        <!-- CONTACT Dropdown -->
+        <div class="relative inline-block text-left">
+          <button id="contact-button" type="button" class="animated-button">
+            CONTACT
+          </button>
+          <div id="contact-dropdown" class="hidden absolute right-0 mt-2 bg-white p-2 rounded shadow-md">
+            <img class="logo mt-4" src="../public/CONTACT.jpeg" alt="Contact Icon">
+           
+            <ul>
+              <li><a class="text-blue-500 hover:underline" href="https://www.linkedin.com/in/timothy-itayi-ab8754138/">LinkedIn</a></li>
+              <li><a class="text-blue-500 hover:underline" href="https://github.com/Timothy-itayi">GitHub</a></li>
+            </ul>
+            
+          </div>
+        </div>
       </li>
     </ul>
   </div>
 </nav>
+
 <div class="flex justify-center mt-4">
   <img class="w-66 h-56 rounded-full border-10 border-gray-500 logo transform transition-transform duration-300 hover:scale-220" src="./public/userIcon.jpeg" alt="User Icon">
 </div>
