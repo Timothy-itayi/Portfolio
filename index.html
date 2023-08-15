@@ -32,9 +32,17 @@
 
 <div class="relative">
   <div class="flex justify-center items-center h-screen">
-    <img class="w-66 h-56 rounded-full border-10 border-gray-500 logo transition-transform duration-300 hover:scale-220 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2" src="./public/userIcon.jpeg" alt="User Icon">
+    <div class="w-66 h-56 rounded-full border-10 border-gray-500 transition-transform duration-300 hover:scale-150 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <img class="w-full h-full rounded-full" src="./public/userIcon.jpeg" alt="User Icon">
+    </div>
+    <div class="w-66 h-56 rounded-full border-10 border-gray-500 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <div class="reveal-image absolute w-full h-full transition-opacity duration-300 opacity-0">
+        <img class="w-full h-full rounded-full" src="./public/titan.jpeg" alt="Titan Image">
+      </div>
+    </div>
   </div>
 </div>
+
 
 
 
@@ -47,8 +55,10 @@
         Hi there, my name is Tim and I'm a highly collaborative and passionate full-stack developer. I thrive on solving complex problems and working in a team environment to create exceptional products. As a graduate of Dev Academy Aotearoa, I acquired technical skills in programming languages such as JavaScript and HTML/CSS, and also developed my human skills such as communication, teamwork, and problem-solving.
       </p>
       <div class="flex justify-center space-x-4">
-            <a class="animated-button" href="./public/Timothy_Itayi_-_Full_Stack_Developer.pdf" download>Download Resume</a>
+            <a class="animated-button" href="./public/Timothy_Itayi_-_Full_Stack_Developer-7.pdf" download>Download Resume</a>
       </div>
+      <div class="flex justify-center space-x-4">
+        <a clss="animated-button" href="https://timothy-itayi-github-io.vercel.app" link>Dev Academy Blog</a> </div>
     </div>
   </div>
 </section>
@@ -89,4 +99,21 @@
 
 
 </body>
+<script>
+  const container = document.querySelector('.relative');
+  const revealImage = container.querySelector('.reveal-image');
+
+  container.addEventListener('mousemove', (e) => {
+    const x = e.clientX - container.offsetLeft;
+    const y = e.clientY - container.offsetTop;
+
+    const offsetX = x / container.clientWidth * 100;
+    const offsetY = y / container.clientHeight * 100;
+
+    revealImage.style.backgroundPosition = `${offsetX}% ${offsetY}%`;
+    
+  });
+
+
+</script>
 </html>
