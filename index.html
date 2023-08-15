@@ -16,8 +16,9 @@
 
     .stack-container {
       position: relative;
-      width: 600px;
+      width: 400px;
       height: 400px;
+      margin: 0 auto;
     }
     .stack-image {
       width: 400px;
@@ -25,6 +26,11 @@
       border-radius: 50%;
       position: absolute;
       transition: opacity 0.5s;
+      display:flex;
+      justify-content:center;
+      align-items: center;
+
+
     }
 
 
@@ -47,25 +53,46 @@
 <nav class="bg-white p-4">
   <div class="container mx-auto flex flex-wrap items-center justify-between">
     <div class="flex items-center justify-center md:justify-start text-gray-900 font-extrabold">
-      <h2 class="text-xl md:text-2xl">JUNIOR WEB DEVELOPER</h2>
+      <h2 class="text-xl md:text-2xl">JUNIOR FULL STACK WEB DEVELOPER</h2>
     </div>
     <ul class="flex justify-between items-center space-x-4">
       <li>
-        <a class="animated-button" href="/index.html">HOME</a>
+        <a class="animated-button" href="./index.html">HOME</a>
       </li>
       <li>
-        <a class="animated-button" href="./blog/recipe.html">PROJECTS</a>
+        <div class="relative">
+          <button class="animated-button" id="projects-menu-button">PROJECTS</button>
+          <div class="origin-top-right absolute right-0 mt-2 w-32 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden" id="projects-menu" style="z-index: 100;">
+            <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="projects-menu-button">
+              <a href="./blog/waitless.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Waitless App</a>
+              <a href="./blog/recipe.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Recipe Blog</a>
+              <a href="https://timothy-itayi-github-io.vercel.app/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Dev Blog</a>
+            </div>
+          </div>
+        </div>
       </li>
       <li>
-        <a class="animated-button" href="https://www.linkedin.com/in/timothy-itayi-ab8754138/">CONTACT</a>
+        <div class="relative">
+          <button class="animated-button" id="contact-menu-button">CONTACT</button>
+          <div class="origin-top-right absolute right-0 mt-2 w-32 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden" id="contact-menu" style="z-index: 100;">
+            <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="contact-menu-button">
+              <a href="https://www.linkedin.com/in/timothy-itayi-ab8754138/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">LinkedIn</a>
+              <a href="https://github.com/Timothy-itayi" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Github</a>
+            </div>
+          </div>
+        </div>
       </li>
     </ul>
   </div>
 </nav>
+
+
+
 <div class="center-container">
   <div class="stack-container">
-    <img class="stack-image" src="./public/photo-output_7.jpg" alt="Output - 7 Image">
-    <img class="stack-image" src="./public/userIcon.jpeg" alt="User Icon">
+    <img class="stack-image" src="./public/userIcon.jpeg" alt="userIcon">
+    <img class="stack-image" src="./public/photo-output_7.jpg" alt="photo-output_0">
+
   </div>
 </div>
 
@@ -126,6 +153,21 @@
 <footer class="bg-gray-900 text-white py-4 text-center">
   <p class="text-gray-500">Copyright © 2023</p>
 </footer>
+<script>
+  const projectsMenuButton = document.getElementById('projects-menu-button');
+  const projectsMenu = document.getElementById('projects-menu');
+  
+  projectsMenuButton.addEventListener('click', () => {
+    projectsMenu.classList.toggle('hidden');
+  });
+
+  const contactMenuButton = document.getElementById('contact-menu-button');
+  const contactMenu = document.getElementById('contact-menu');
+  
+  contactMenuButton.addEventListener('click', () => {
+    contactMenu.classList.toggle('hidden');
+  });
+</script>
 
 </body>
 
